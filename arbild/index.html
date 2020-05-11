@@ -33,17 +33,18 @@
         vr-mode-ui='enabled: false;'
         renderer="logarithmicDepthBuffer: true;"
         embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
-
+        <a-assets>
+          <img id="transpImage" src="https://natrium83.github.io/arbild/assets/bild.png">
+      </a-assets>
         <!-- use rawgithack to retrieve the correct url for nft marker (see 'pinball' below) -->
         <a-nft
             type='nft' url='https://natrium83.github.io/ar3d/assets/marker_image'
             smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
-            <a-entity
-                a-image src='https://natrium83.github.io/arbild/assets/bild.png'
-                scale="2 2 2"
-                position="0 0 0"
+            <a-image src="#transpImage"
+                width="2"
+                height="1"
                 >
-            </a-entity>
+            </a-image>
         </a-nft>
 		<a-entity camera></a-entity>
     </a-scene>
